@@ -1,15 +1,15 @@
-
+import { GET_CATEGORIES } from "../actions";
 
 const initialState = {
-    isLoading: false,
+    categories: [],
 }
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'LOADING':
+        case GET_CATEGORIES:
             return {
                 ...state,
-                isLoading: action.payload
+                categories: action.payload
             }
         default:
             return state;
